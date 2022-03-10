@@ -1,4 +1,4 @@
-##CMD/PS
+##PS
 ##Scripted steps for Endpoint/Defender Updates from https://docs.microsoft.com/en-us/mem/configmgr/protect/deploy-use/troubleshoot-endpoint-client
 
 ##Reset IE Settings
@@ -17,9 +17,9 @@ net start wuauserv
 ##Reset AV engine
 cd \
 
-# cd program files\windows defender
+# cd "C:\Program Files\Windows Defender"
 ##For servers, comment out the above, uncomment the below
-cd program files\microsoft security client
+cd "C:\Program Files\Microsoft Security Client"
 MpCmdRun -RemoveDefinitions -all
 
 ##If all of the above fail, manually download definitions at https://www.microsoft.com/en-us/wdsi/defenderupdates
