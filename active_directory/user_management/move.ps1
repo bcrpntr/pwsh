@@ -49,8 +49,8 @@ foreach ($sourceOU in $sourceOUs) {
         }
         
         # Move the user (simulated with -WhatIf, remove -WhatIf to actually move users)
-        Move-ADObject -Identity $userDN -TargetPath $destinationOU -WhatIf
-        Write-Host "Simulating move of user $($user.Name) from $($sourceOUOnly) to $destinationOU"
+        Move-ADObject -Identity $userDN -TargetPath $destinationOU # -WhatIf
+        Write-Host "Moved user $($user.Name) from $($sourceOUOnly) to $destinationOU"
     }
 }
 
